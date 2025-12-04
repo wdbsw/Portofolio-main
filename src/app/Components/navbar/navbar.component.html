@@ -1,10 +1,40 @@
-<header>
-    <a routerLink="home" class="logo">wdbs</a>
-    <nav class="navigation">
-        <!-- <a href="#services">Services</a> -->
-        <a routerLink="./apropos">A propos</a>
-        <a routerLink="./project">Projects</a>
-        <a routerLink="./contact">Contact</a>
+<header [class.menu-open]="menuOpen" [class.scrolled]="scrolled">
+    <a routerLink="/home" class="logo">wdbs</a>
 
+    <!-- Menu burger pour mobile -->
+    <button class="menu-toggle" aria-label="Toggle navigation" (click)="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+    <nav class="navigation" [class.active]="menuOpen">
+        <a routerLink="/apropos" (click)="closeMenu()">À propos</a>
+        <a routerLink="/projects" (click)="closeMenu()">Projets</a>
+        <a routerLink="/contact" (click)="closeMenu()">Contact</a>
     </nav>
 </header>
+
+
+
+<script>
+    // Toggle menu burger
+    const toggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('.navigation');
+    const header = document.querySelector('header');
+
+    toggle.addEventListener('click', () => {
+        nav.classList.toggle('active');
+        toggle.classList.toggle('active');
+        header.classList.toggle('menu-open');
+    });
+
+    // Scroll header
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+</script>
