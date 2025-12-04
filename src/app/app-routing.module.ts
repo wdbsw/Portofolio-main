@@ -8,7 +8,7 @@ import { AproposComponent } from './Components/apropos/apropos.component';
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
-  { path: 'project', component: ProjectsComponent },
+  { path: 'projects', component: ProjectsComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'apropos', component: AproposComponent },
 ];
