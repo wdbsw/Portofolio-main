@@ -1,72 +1,141 @@
-.title {
-  display: flex;
-  justify-content: center;
-  color: #3a6cf4;
-  font-size: 2.2em;
-  font-weight: 800;
-  margin-bottom: 30px;
-}
-
-.content {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
+/* ===== Projects Section ===== */
 
 .projects {
-  background-color: #000016;
+    padding: 80px 12%;
+    background: #000016;
+    /* Fond sombre élégant */
+    font-family: 'Poppins', sans-serif;
+    /* ✅ Poppins */
 }
 
-.projects .content {
-  margin-top: 30px;
+
+/* ===== Section Titles ===== */
+
+.section-title,
+.title {
+    display: flex;
+    justify-content: center;
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #3a6cf4;
+    margin-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
+    /* ✅ Poppins */
 }
+
+
+/* ===== Responsive Grid ===== */
+
+.projects-grid,
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    font-family: 'Poppins', sans-serif;
+    /* ✅ Poppins */
+}
+
+
+/* ===== Project Card ===== */
 
 .project-card {
-  background-color: #fff;
-  border: 1px solid #fff;
-  min-height: 14em;
-  width: 23em;
-  overflow: hidden;
-  border-radius: 10px;
-  margin: 20px;
-  transition: 0.7s ease;
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    min-height: 14em;
+    width: 23em;
+    backdrop-filter: blur(12px);
+    box-shadow: 4px 6px 18px rgba(0, 0, 0, 0.15);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+    font-family: 'Poppins', sans-serif;
+    /* ✅ Poppins */
 }
 
 .project-card:hover {
-  transform: scale(1.1);
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 8px 12px 28px rgba(0, 0, 0, 0.25);
 }
 
-.project-card:hover .project-image {
-  opacity: 0.9;
-}
+
+/* ===== Project Image ===== */
 
 .project-image img {
-  width: 100%;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
 }
 
+.project-card:hover .project-image img {
+    opacity: 0.9;
+}
+
+
+/* ===== Project Info ===== */
+
 .project-info {
-  padding: 1em;
+    padding: 1em;
+    font-family: 'Poppins', sans-serif;
+    /* ✅ Poppins */
 }
 
 .project-category {
-  font-size: 0.8em;
-  color: #000;
+    font-size: 0.85rem;
+    opacity: 0.7;
+    text-transform: capitalize;
+    font-family: 'Poppins', sans-serif;
+    /* ✅ Poppins */
 }
 
 .project-title {
-  display: flex;
-  justify-content: space-between;
-  text-transform: uppercase;
-  font-weight: 800;
-  margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    /* ✅ Poppins */
 }
 
-.more-details {
-  text-decoration: none;
-  color: #3a6cf4;
+
+/* ===== Links / Buttons ===== */
+
+.more-details,
+.project-link {
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+    font-family: 'Poppins', sans-serif;
+    /* ✅ Poppins */
 }
 
-.more-details:hover {
-  color: #601cfc;
+.more-details:hover,
+.project-link:hover {
+    color: #601cfc;
+}
+
+
+/* Button variant for project-link */
+
+.project-link {
+    display: inline-block;
+    padding: 8px 12px;
+    margin-top: 10px;
+    background: linear-gradient(90deg, #bd6919, #80450e);
+    border-radius: 30px;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    /* ✅ Poppins */
+}
+
+
+/* ===== Responsive ===== */
+
+@media(max-width: 768px) {
+    .project-card {
+        width: 90%;
+    }
 }
