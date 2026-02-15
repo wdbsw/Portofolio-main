@@ -1,5 +1,10 @@
 /* ===== Footer 2027 ===== */
 
+body {
+    background-color: #f0f0f0;
+    /* ✅ Couleur de fond claire pour un look moderne */
+}
+
 .footer {
     font-family: 'Poppins', sans-serif;
     /* ✅ Police Poppins */
