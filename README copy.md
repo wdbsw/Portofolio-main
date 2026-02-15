@@ -10,6 +10,14 @@ docker-compose exec angular-dev sh
 # ODC - Angular - Portofolio-main
 
 **Étape 1 :** Préparation de l’environnement  
+```bash
+# Installation
+  npm install -g @angular/cli
+  ng new mon-projet
+  cd mon-projet
+  ng serve
+```
+
 **Étape 2 :** Edition du projet Portfolio-main
 
 **Étape 3 :** Création des composants
